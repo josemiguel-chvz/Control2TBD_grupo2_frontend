@@ -1,23 +1,26 @@
 [
   {
+    "name": "buscar",
+    "path": "/buscar",
+    "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\buscar.vue",
+    "chunkName": "pages/buscar"
+  },
+  {
     "name": "crear",
     "path": "/crear",
     "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\crear.vue",
-    "chunkName": "pages/crear",
-    "_name": "_328fd13a"
+    "chunkName": "pages/crear"
   },
   {
     "name": "listar",
     "path": "/listar",
     "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\listar.vue",
-    "chunkName": "pages/listar",
-    "_name": "_5b0c2dba"
+    "chunkName": "pages/listar"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_d9e09ba4"
+    "chunkName": "pages/index"
   }
 ]
