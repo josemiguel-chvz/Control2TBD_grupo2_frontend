@@ -1,0 +1,23 @@
+[
+  {
+    "name": "crear",
+    "path": "/crear",
+    "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\crear.vue",
+    "chunkName": "pages/crear",
+    "_name": "_328fd13a"
+  },
+  {
+    "name": "listar",
+    "path": "/listar",
+    "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\listar.vue",
+    "chunkName": "pages/listar",
+    "_name": "_5b0c2dba"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_d9e09ba4"
+  }
+]
