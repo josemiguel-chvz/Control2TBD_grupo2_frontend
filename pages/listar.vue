@@ -6,7 +6,7 @@
     <div>
       <b-table head-variant="dark" bordered hover :items="books" :fields="fields">
         <template #cell(settings)>
-          <b-button size="sm"  variant="primary">Ver</b-button>
+          <b-button size="sm"  variant="primary"  :href="'/ver/'+1">Ver</b-button>
           <b-button size="sm"  variant="danger">Eliminar</b-button>
         </template>
       </b-table>    
