@@ -7,8 +7,7 @@
 				<b-navbar-nav>
 					<b-nav-item href="/">Inicio</b-nav-item>
 					<b-nav-item href="/crear">Crear libro</b-nav-item>
-					<b-nav-item href="/buscar">Buscar Libro</b-nav-item>
-					<b-nav-item href="/listar">Libros</b-nav-item>
+					<b-nav-item href="/listar">Lista Libros</b-nav-item>
 				</b-navbar-nav>
 			</b-collapse>
 		</b-navbar>

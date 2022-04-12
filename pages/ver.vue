@@ -1,6 +1,6 @@
 <template>
   <div>
-      aca pueden agregar el delete y update segun el libro que quieran buscar
+      aca pueden agregar el delete y editar segun el libro que quieran buscar
   </div>
 </template>
 

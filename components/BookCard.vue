@@ -1,5 +1,5 @@
 <template>
-  <b-card class="mb-4" img-src="/stock_book.jpeg" img-alt="Image" img-top fluid style="max-width: 15rem;">
+  <b-card class="mb-4" img-src="/stock_book.jpeg" img-alt="Image" img-top fluid style="max-width: 15rem;max-height: 26rem;">
     <template #header>
       <h5 class="mb-0">{{title}}</h5>
     </template>
@@ -14,8 +14,8 @@
       <li>
         Idioma: <b>{{language}}</b>
       </li>
-      <li>
-        <h6 class="mt-3 small">SKU: {{sku}}</h6>
+      <li >
+        <b-button size="sm" style="margin: 0 auto; display: block;width:100px;" class="mt-3" variant="primary">Ver</b-button>
       </li>
     </ul>
   </b-card-text>

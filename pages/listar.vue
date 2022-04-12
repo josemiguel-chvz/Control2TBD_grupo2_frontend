@@ -1,31 +1,54 @@
 <template>
   <div class="container-sm mt-4">
-    <div class="mx-auto" style="width:500px;">
-      <h1 class="display-4 font-weight-light">Libros disponibles</h1>
+     <div class="mx-auto" style="width:200px;">
+      <h1 class="display-4 font-weight-light">Libros</h1>
     </div>
-    <div class="mx-auto mt-4">
-      <b-row>
-        <b-col v-for="(book, index) in books" :key="index" cols=3>
-          <book-card
-            :title="book.title"
-            :author="book.author"
-            :pages="book.pages"
-            :language="book.language"
-            :sku="book.sku"
-          />
-        </b-col>
-      </b-row>
+    <div>
+      <b-table head-variant="dark" bordered hover :items="books" :fields="fields">
+        <template #cell(settings)>
+          <b-button size="sm"  variant="primary">Ver</b-button>
+          <b-button size="sm"  variant="danger">Eliminar</b-button>
+        </template>
+      </b-table>    
     </div>
   </div>
 </template>
 
 <script>
-import BookCard from '~/components/BookCard.vue';
 export default {
-  components: { BookCard },
   data(){
     return {
-      books: []
+      books: [],
+      fields: [
+        {
+          key: 'id',
+          label: '#'
+        },
+        {
+          key: 'sku',
+          label: 'sku'
+        },
+        {
+          key: 'title',
+          label: 'Nombre'
+        },
+        {
+          key: 'author',
+          label: 'Autor'
+        },
+        {
+          key: 'pages',
+          label: 'Páginas'
+        },
+        {
+          key: 'language',
+          label: 'Idioma'
+        },
+        {
+          key: 'settings',
+          label: 'Configuración'
+        } 
+      ]
     }
   },
   created() {
