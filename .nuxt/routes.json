@@ -2,25 +2,29 @@
   {
     "name": "buscar",
     "path": "/buscar",
-    "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\buscar.vue",
-    "chunkName": "pages/buscar"
+    "component": "/Users/josemchavezg/personal_projects/control_2_tbd/Control2TBD_grupo2_frontend/pages/buscar.vue",
+    "chunkName": "pages/buscar",
+    "_name": "_e7f0dbb2"
   },
   {
     "name": "crear",
     "path": "/crear",
-    "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\crear.vue",
-    "chunkName": "pages/crear"
+    "component": "/Users/josemchavezg/personal_projects/control_2_tbd/Control2TBD_grupo2_frontend/pages/crear.vue",
+    "chunkName": "pages/crear",
+    "_name": "_612fdc04"
   },
   {
     "name": "listar",
     "path": "/listar",
-    "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\listar.vue",
-    "chunkName": "pages/listar"
+    "component": "/Users/josemchavezg/personal_projects/control_2_tbd/Control2TBD_grupo2_frontend/pages/listar.vue",
+    "chunkName": "pages/listar",
+    "_name": "_b20a8ebc"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\josec\\\\Desktop\\\\control2tbd\\\\frontend\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "/Users/josemchavezg/personal_projects/control_2_tbd/Control2TBD_grupo2_frontend/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_0d8776cf"
   }
 ]

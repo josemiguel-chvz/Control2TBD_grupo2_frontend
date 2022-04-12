@@ -4,10 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _90f27ab0 = () => interopDefault(import('..\\pages\\buscar.vue' /* webpackChunkName: "pages/buscar" */))
-const _328fd13a = () => interopDefault(import('..\\pages\\crear.vue' /* webpackChunkName: "pages/crear" */))
-const _5b0c2dba = () => interopDefault(import('..\\pages\\listar.vue' /* webpackChunkName: "pages/listar" */))
-const _d9e09ba4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _e7f0dbb2 = () => interopDefault(import('../pages/buscar.vue' /* webpackChunkName: "pages/buscar" */))
+const _612fdc04 = () => interopDefault(import('../pages/crear.vue' /* webpackChunkName: "pages/crear" */))
+const _b20a8ebc = () => interopDefault(import('../pages/listar.vue' /* webpackChunkName: "pages/listar" */))
+const _0d8776cf = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -22,19 +22,19 @@ export const routerOptions = {
 
   routes: [{
     path: "/buscar",
-    component: _90f27ab0,
+    component: _e7f0dbb2,
     name: "buscar"
   }, {
     path: "/crear",
-    component: _328fd13a,
+    component: _612fdc04,
     name: "crear"
   }, {
     path: "/listar",
-    component: _5b0c2dba,
+    component: _b20a8ebc,
     name: "listar"
   }, {
     path: "/",
-    component: _d9e09ba4,
+    component: _0d8776cf,
     name: "index"
   }],
 
