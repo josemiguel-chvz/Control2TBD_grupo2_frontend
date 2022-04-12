@@ -3,6 +3,7 @@
       
       Nombre libro: {{book.title}}
   </div>
+
 </template>
 
 <script>
