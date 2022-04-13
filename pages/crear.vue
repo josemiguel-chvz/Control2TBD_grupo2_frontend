@@ -1,8 +1,9 @@
 <template>
-<b-container>
+<b-container class="mt-4">
   <form>
   <div>
     <h1 class="display-4 font-weight-light">Crear Libro</h1>
+    <br>
     <b-form-group
       id="sku"
       description="Ejemplo: XX1ABC"
@@ -80,14 +81,17 @@
       :invalid-feedback="invalidFeedback5"
       :state="state5"
     >
-      <b-form-input id="lenguage" v-model="newBook.lenguage" :state="state5" trim></b-form-input>
+      <b-form-input id="lenguage" v-model="newBook.language" :state="state5" trim></b-form-input>
     </b-form-group>
     <div>
       <b-row>
-        <b-col lg="4" class="pb-2">
-        <b-button type="button" size="lg" @click="send" variant="outline-success">
-        Crear
-        </b-button>
+        <b-col cols="4" class="pb-2">
+          <b-button type="button" size="lg" @click="send" variant="outline-success">
+            Crear
+          </b-button>
+        </b-col>
+        <b-col>
+          <b-alert show variant="success" fade v-model="show_success_alert">Libro creado correctamente</b-alert>
         </b-col>
       </b-row>
     </div>
@@ -113,7 +117,7 @@
         return (this.newBook.pages >= 2)
       },
       state5() {
-        return (this.newBook.lenguage.length >= 3)
+        return (this.newBook.language.length >= 3)
       },
     
       
@@ -142,7 +146,7 @@
         return 'Por favor, rellene el campo'
       },
       invalidFeedback5() {
-        if (this.newBook.lenguage.length > 0) {
+        if (this.newBook.language.length > 0) {
           return 'Ingrese al menos 3 caracteres'
         }
         return 'Por favor, rellene el campo'
@@ -151,23 +155,24 @@
     },
     data(){
       return {
+          show_success_alert: false,
           newBook:{
             sku: "",
             title: "",
             author: "",
-            pages: Number,
-            lenguage: "" 
+            pages: 0,
+            language: "" 
           }
         }
     },
     methods:{
       send:async function(){
         try {
-          //console.log(this.book)
-          var result = await this.$axios.post("/api/books",this.newBook);
-          let book = result.data;
-          //mensaje de éxito
-          //...
+          console.log(this.newBook)
+          let response = await this.$axios.post("/api/books",this.newBook);
+          if (response.status == 201) {
+            this.show_success_alert = true;
+          }
           } catch (error) {
 
               console.log("error", error)
