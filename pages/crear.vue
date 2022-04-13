@@ -164,7 +164,8 @@
     methods:{
       send:async function(){
         try {
-          var result = await this.$axios.post("/api/books",this.newBook);
+          console.log(this.book)
+          // var result = await this.$axios.post("/api/books",this.newBook);
           let book = result.data;
           //mensaje de éxito
           //...

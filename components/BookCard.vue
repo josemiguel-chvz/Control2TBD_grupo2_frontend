@@ -1,5 +1,5 @@
 <template>
-  <b-card class="mb-4" img-src="/stock_book.jpeg" img-alt="Image" img-top fluid style="max-width: 15rem;max-height: 26rem;">
+  <b-card class="mb-4" img-src="/stock_book.jpeg" img-alt="Image" img-top fluid style="max-width: 15rem;">
     <template #header>
       <h5 class="mb-0">{{title}}</h5>
     </template>
@@ -15,7 +15,7 @@
         Idioma: <b>{{language}}</b>
       </li>
       <li >
-        <b-button size="sm" style="margin: 0 auto; display: block;width:100px;" class="mt-3" variant="primary">Ver</b-button>
+        <b-button size="sm" style="margin: 0 auto; display: block;width:100px;" class="mt-3" variant="primary" @click="ViewBook(id)">Ver</b-button>
       </li>
     </ul>
   </b-card-text>
@@ -25,11 +25,18 @@
 <script>
 export default {
   props: {
+    id: Number,
     title: String,
     author: String,
     pages: Number,
     language: String,
     sku: String
+  },
+  methods: {
+    ViewBook: function(event) {
+      let bookd_id = event;
+      this.$router.push({path: `/ver/${bookd_id}`})
+    }
   }
 }
 </script>

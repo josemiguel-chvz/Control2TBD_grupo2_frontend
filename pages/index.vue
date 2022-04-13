@@ -7,6 +7,7 @@
       <b-row>
         <b-col v-for="(book, index) in books" :key="index" cols=3>
           <book-card
+            :id="book.id"
             :title="book.title"
             :author="book.author"
             :pages="book.pages"
