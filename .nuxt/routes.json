@@ -1,68 +1,30 @@
 [
   {
-<<<<<<< Updated upstream
     "name": "crear",
     "path": "/crear",
     "component": "/Users/josemchavezg/personal_projects/usach/TBD/control_2/Control2TBD_frontend/pages/crear.vue",
-<<<<<<< HEAD
-    "chunkName": "pages/crear"
-=======
     "chunkName": "pages/crear",
     "_name": "_fc1f5a52"
-=======
-    "name": "buscar",
-    "path": "/buscar",
-    "component": "C:\\\\Users\\\\Ekayn\\\\Desktop\\\\Control2TBD_grupo2_frontend\\\\pages\\\\buscar.vue",
-    "chunkName": "pages/buscar",
-    "_name": "_92dcb426"
-  },
-  {
-    "name": "crear",
-    "path": "/crear",
-    "component": "C:\\\\Users\\\\Ekayn\\\\Desktop\\\\Control2TBD_grupo2_frontend\\\\pages\\\\crear.vue",
-    "chunkName": "pages/crear",
-    "_name": "_6ad1377e"
->>>>>>> Stashed changes
->>>>>>> 95ec76ee4a7d4328b5d304d60c9b8ce2bfdd5bfb
   },
   {
     "name": "listar",
     "path": "/listar",
-<<<<<<< Updated upstream
     "component": "/Users/josemchavezg/personal_projects/usach/TBD/control_2/Control2TBD_frontend/pages/listar.vue",
-    "chunkName": "pages/listar"
+    "chunkName": "pages/listar",
+    "_name": "_c36dc7a2"
   },
   {
     "name": "ver",
     "path": "/ver",
     "component": "/Users/josemchavezg/personal_projects/usach/TBD/control_2/Control2TBD_frontend/pages/ver.vue",
-<<<<<<< HEAD
-    "chunkName": "pages/ver"
-=======
     "chunkName": "pages/ver",
     "_name": "_e90bac1a"
-=======
-    "component": "C:\\\\Users\\\\Ekayn\\\\Desktop\\\\Control2TBD_grupo2_frontend\\\\pages\\\\listar.vue",
-    "chunkName": "pages/listar",
-    "_name": "_5cf66730"
->>>>>>> Stashed changes
->>>>>>> 95ec76ee4a7d4328b5d304d60c9b8ce2bfdd5bfb
   },
   {
     "name": "index",
     "path": "/",
-<<<<<<< Updated upstream
     "component": "/Users/josemchavezg/personal_projects/usach/TBD/control_2/Control2TBD_frontend/pages/index.vue",
-<<<<<<< HEAD
-    "chunkName": "pages/index"
-=======
     "chunkName": "pages/index",
     "_name": "_2e47eda2"
-=======
-    "component": "C:\\\\Users\\\\Ekayn\\\\Desktop\\\\Control2TBD_grupo2_frontend\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_1728d249"
->>>>>>> Stashed changes
->>>>>>> 95ec76ee4a7d4328b5d304d60c9b8ce2bfdd5bfb
   }
 ]
