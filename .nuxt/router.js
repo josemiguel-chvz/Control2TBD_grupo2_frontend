@@ -30,7 +30,7 @@ export const routerOptions = {
     name: "listar"
   }, {
     path: "/ver",
-    component: _e90bac1a,
+    component: _ee6be74c,
     name: "ver"
   }, {
     path: "/",
