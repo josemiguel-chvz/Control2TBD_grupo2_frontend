@@ -2,7 +2,7 @@
 <b-container>
   <form>
   <div>
-    CREAR LIBRO
+    <h1 class="display-4 font-weight-light">Crear Libro</h1>
     <b-form-group
       id="sku"
       description="Ejemplo: XX1ABC"
@@ -14,9 +14,9 @@
       content-cols-sm
       content-cols-lg="5"
       :invalid-feedback="invalidFeedback1"
-      :state="state"
+      :state="state1"
     >
-      <b-form-input id="sku" v-model="sku" :state="state1" trim></b-form-input>
+      <b-form-input id="sku" v-model="newBook.sku" :state="state1" trim></b-form-input>
     </b-form-group>
 
     <b-form-group
@@ -30,9 +30,9 @@
       content-cols-sm
       content-cols-lg="5"
       :invalid-feedback="invalidFeedback2"
-      :state="state"
+      :state="state2"
     >
-      <b-form-input id="title" v-model="title" :state="state2" trim></b-form-input>
+      <b-form-input id="title" v-model="newBook.title" :state="state2" trim></b-form-input>
     </b-form-group>
 
     <b-form-group
@@ -46,9 +46,9 @@
       content-cols-sm
       content-cols-lg="5"
       :invalid-feedback="invalidFeedback3"
-      :state="state"
+      :state="state3"
     >
-      <b-form-input id="author" v-model="author" :state="state3" trim></b-form-input>
+      <b-form-input id="author" v-model="newBook.author" :state="state3" trim></b-form-input>
     </b-form-group>
 
     <b-form-group
@@ -62,9 +62,9 @@
       content-cols-sm
       content-cols-lg="5"
       :invalid-feedback="invalidFeedback4"
-      :state="state"
+      :state="state4"
     >
-      <b-form-input id="pages" type="number" v-model="pages" :state="state4" trim></b-form-input>
+      <b-form-input  type="number" id="pages" v-model="newBook.pages" :state="state4" trim></b-form-input>
     </b-form-group>
 
     <b-form-group
@@ -78,9 +78,9 @@
       content-cols-sm
       content-cols-lg="5"
       :invalid-feedback="invalidFeedback5"
-      :state="state"
+      :state="state5"
     >
-      <b-form-input id="lenguage" v-model="lenguage" :state="state5" trim></b-form-input>
+      <b-form-input id="lenguage" v-model="newBook.lenguage" :state="state5" trim></b-form-input>
     </b-form-group>
     <div>
       <b-row>
@@ -98,82 +98,82 @@
 
 <script>
   export default {
+     
     computed: {
       state1() {
-        return (this.sku.length >= 6)
+        return (this.newBook.sku.length >= 6)
       },
       state2() {
-        return (this.title.length >= 2)
+        return (this.newBook.title.length >= 2)
       },
       state3() {
-        return (this.author.length >= 2)
+        return (this.newBook.author.length >= 2)
       },
-      state4() {
-        return (this.pages >= 2)
+      state4() { 
+        return (this.newBook.pages >= 2)
       },
       state5() {
-        return (this.lenguage.length >= 3)
+        return (this.newBook.lenguage.length >= 3)
       },
+    
+      
       invalidFeedback1() {
-        if (this.sku.length > 0) {
+        if (this.newBook.sku.length > 0) {
           return 'Ingrese al menos 6 caracteres.'
         }
-      
         return 'Por favor, rellene el campo'
       },
       invalidFeedback2() {
-        if (this.title.length > 0) {
+        if (this.newBook.title.length > 0) {
           return 'Ingrese al menos 2 caracteres'
         }
-      
         return 'Por favor, rellene el campo'
       },
       invalidFeedback3() {
-        if (this.author.length > 0) {
+        if (this.newBook.author.length > 0) {
           return 'Ingrese al menos 2 caracteres'
         }
-      
         return 'Por favor, rellene el campo'
       },
       invalidFeedback4() {
-        if (this.pages != null) {
+        if (this.newBook.pages == null) {
           return 'No puede tener menos de 2 paginas'
         }
-      
         return 'Por favor, rellene el campo'
       },
       invalidFeedback5() {
-        if (this.lenguage.length > 0) {
+        if (this.newBook.lenguage.length > 0) {
           return 'Ingrese al menos 3 caracteres'
         }
-      
         return 'Por favor, rellene el campo'
       }
       
     },
-    data() {
+    data(){
       return {
-        newBook:{},
-        sku: '',
-        title: '',
-        author: '',
-        pages: '', 
-        lenguage: ''
-      }
+          newBook:{
+            sku: "",
+            title: "",
+            author: "",
+            pages: Number,
+            lenguage: "" 
+          }
+        }
     },
     methods:{
       send:async function(){
         try {
-          console.log(this.book)
-          // var result = await this.$axios.post("/api/books",this.newBook);
+          //console.log(this.book)
+          var result = await this.$axios.post("/api/books",this.newBook);
           let book = result.data;
           //mensaje de éxito
           //...
           } catch (error) {
-          //mensaje de error
-          console.log("error", error)
+
+              console.log("error", error)
           }
-        } 
+        },
+         
       }
   }
 </script>
