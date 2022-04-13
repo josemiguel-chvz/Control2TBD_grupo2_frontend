@@ -1,12 +1,12 @@
 <template>
   <div class="container-sm mt-4">
-     <div class="mx-auto" style="width:200px;">
+    <div class="mx-auto" style="width:200px;">
       <h1 class="display-4 font-weight-light">Libros</h1>
     </div>
     <div>
       <b-table head-variant="dark" bordered hover :items="books" :fields="fields">
         <template #cell(settings)>
-          <b-button size="sm"  variant="primary"  :href="'/ver/'+1">Ver</b-button>
+          <b-button size="sm"  variant="primary"  :href="'/ver/'">Ver</b-button>
           <b-button size="sm"  variant="danger">Eliminar</b-button>
         </template>
       </b-table>    
@@ -57,7 +57,7 @@ export default {
   methods: {
     getData: async function() {
       try {
-        let response = await this.$axios.get("/api/books");
+        let response = await this.$axios.get("/api/books/");
         this.books = response.data;
       } catch (error) {
         console.log(error)
@@ -68,5 +68,4 @@ export default {
 </script>
 
 <style>
-
 </style>
