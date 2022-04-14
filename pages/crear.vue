@@ -105,25 +105,25 @@
      
     computed: {
       state1() {
-        return (this.newBook.sku.length >= 6)
+        return (this.newBook.sku.length >= 6 && this.newBook.sku.length < 11)
       },
       state2() {
-        return (this.newBook.title.length >= 2)
+        return (this.newBook.title.length >= 2 && this.newBook.title.length < 200)
       },
       state3() {
-        return (this.newBook.author.length >= 2)
+        return (this.newBook.author.length >= 2 && this.newBook.author.length < 200)
       },
       state4() { 
         return (this.newBook.pages >= 2)
       },
       state5() {
-        return (this.newBook.language.length >= 3)
+        return (this.newBook.language.length >= 3 && this.newBook.language.length < 20)
       },
     
       
       invalidFeedback1() {
         if (this.newBook.sku.length > 0) {
-          return 'Ingrese al menos 6 caracteres.'
+          return 'Ingrese al menos 6 caracteres y maximo 10'
         }
         return 'Por favor, rellene el campo'
       },
