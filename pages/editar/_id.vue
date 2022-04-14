@@ -77,13 +77,14 @@
     </b-form-group>
     <div>
       <b-row>
-        <b-col cols="4" class="pb-2">
+        <b-col cols=3 class="pb-2">
           <b-button type="button" size="lg" @click="update" variant="outline-success">
             Actualizar
           </b-button>
         </b-col>
-        <b-col>
+        <b-col cols=6>
           <b-alert show variant="success" fade v-model="show_success_alert">Libro actualizado correctamente</b-alert>
+          <b-alert show variant="danger" fade v-model="show_error_alert">{{error_message}}</b-alert>
         </b-col>
       </b-row>
     </div>
@@ -97,7 +98,9 @@ export default {
   data() {
     return{
       book:{},
-      show_success_alert: false
+      show_success_alert: false,
+      show_error_alert:false,
+      error_message: ''
     }
   },
   created() {
@@ -116,12 +119,17 @@ export default {
     update: async function(){
       try{
         let book_id = this.$route.params.id;    
-        let response = await this.$axios.put("/api/books/"+book_id);
+        let response = await this.$axios.put("/api/books/"+book_id, this.book);
         if (response.status == 200){
-          this.show_success_alert = true
+          this.show_error_alert = false;
+          this.error_message = '';
+          this.show_success_alert = true;
+         
         }
       } catch(error){
-        console.log(error)
+        this.show_success_alert = false;
+        this.error_message = error.response.data.message;
+        this.show_error_alert = true;
       }
     }
   } 
